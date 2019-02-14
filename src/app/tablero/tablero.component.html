@@ -1,0 +1,16 @@
+<mat-grid-list class="board shadow" cols="5" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let position of board"
+  [colspan]='position.cols'
+  [rowspan]='position.rows'
+  class="position "
+  (click) = "setSelected(position.id,position.piece)"
+  >
+  <div class="full-size" [style.background]='position.color'></div>
+  <div [ngClass]='{"piece-blue":position.piece==1,"piece-red":position.piece==2,"piece-green":position.piece==3,"piece":position.piece}'>
+    
+  </div>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+  

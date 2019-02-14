@@ -1,0 +1,58 @@
+.shadow{
+    -webkit-box-shadow: 9px 9px 42px -6px rgba(0,0,0,0.72);
+-moz-box-shadow: 9px 9px 42px -6px rgba(0,0,0,0.72);
+box-shadow: 9px 9px 42px -6px rgba(0,0,0,0.72);
+}
+.board{
+    background-image: url("https://thumb.bibliocad.com/images/content/00030000/3000/33967.jpg");
+    -webkit-box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
+    
+}
+
+.position div{
+    opacity:0.1;
+}
+
+.position:hover div{
+    opacity:0.4;
+}
+.full-size{
+    
+    width: 100%;
+    height: 100%;
+}
+.piece{
+    position: absolute;
+    opacity:1 !important;
+    width: 80%;
+    height: 80%;
+    z-index: 100;
+    border-radius: 100%;
+    -webkit-box-shadow: 10px 10px 52px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 52px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 52px 6px rgba(0,0,0,0.75);
+-webkit-box-shadow: inset -70px -70px 23px -65px rgba(0,0,0,0.54);
+-moz-box-shadow: inset -70px -70px 23px -65px rgba(0,0,0,0.54);
+box-shadow: inset -70px -70px 23px -65px rgba(0,0,0,0.54);
+    border: 2px solid #000000;
+}
+
+.piece-blue{
+    background-color: #665ff4;
+}
+.piece-red{
+    background-color: #ef5865;
+}
+.piece-green{
+    background-color: #a2c999;
+
+    background-image: url("https://cdn0.iconfinder.com/data/icons/education-239/64/science-atom-education-nuclear-physics-electron-512.png");
+    background-repeat: no-repeat;
+
+    background-size: 100% 100%;
+}
+
+
+
