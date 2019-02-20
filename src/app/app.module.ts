@@ -5,7 +5,6 @@ import { TableroComponent } from './tablero/tablero.component'
 import { AppComponent }         from './app.component';
 import { MatGridListModule } from '@angular/material'
 import { TableroModule } from './tablero/tablero.module';
-import { BoardComponent } from './board/board.component'
  
 @NgModule({
   imports: [
@@ -16,7 +15,7 @@ import { BoardComponent } from './board/board.component'
   declarations: [
     AppComponent,
     TableroComponent,
-    BoardComponent
+    
   ],
   bootstrap: [ AppComponent ]
 })

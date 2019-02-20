@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~primeflex/primeflex.css'
+@import '~primeflex/primeflex.css';
+.background{
+    background: rgba(249,251,252,1);
+    background: -moz-linear-gradient(left, rgba(249,251,252,1) 0%, rgba(208,233,242,1) 0%, rgba(185,234,250,1) 49%, rgba(120,208,235,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(249,251,252,1)), color-stop(0%, rgba(208,233,242,1)), color-stop(49%, rgba(185,234,250,1)), color-stop(100%, rgba(120,208,235,1)));
+    background: -webkit-linear-gradient(left, rgba(249,251,252,1) 0%, rgba(208,233,242,1) 0%, rgba(185,234,250,1) 49%, rgba(120,208,235,1) 100%);
+    background: -o-linear-gradient(left, rgba(249,251,252,1) 0%, rgba(208,233,242,1) 0%, rgba(185,234,250,1) 49%, rgba(120,208,235,1) 100%);
+    background: -ms-linear-gradient(left, rgba(249,251,252,1) 0%, rgba(208,233,242,1) 0%, rgba(185,234,250,1) 49%, rgba(120,208,235,1) 100%);
+    background: linear-gradient(to right, rgba(249,251,252,1) 0%, rgba(208,233,242,1) 0%, rgba(185,234,250,1) 49%, rgba(120,208,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fbfc', endColorstr='#78d0eb', GradientType=1 );
+  }

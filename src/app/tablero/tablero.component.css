@@ -15,6 +15,7 @@ box-shadow: 9px 9px 42px -6px rgba(0,0,0,0.72);
     opacity:0.1;
 }
 
+
 .position:hover div{
     opacity:0.4;
 }
@@ -54,5 +55,7 @@ box-shadow: inset -70px -70px 23px -65px rgba(0,0,0,0.54);
     background-size: 100% 100%;
 }
 
-
+.piece-selected{
+    background-color: #f6f7b7b7;
+}
 
