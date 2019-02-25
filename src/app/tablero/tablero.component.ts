@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-tablero',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableroComponent implements OnInit {
 
-  constructor() { }
-  board: any[]=[];
-  pieceSelected: any = {selected: false};
+  constructor(private toastr: ToastrService) { }
+  board: any[]=[]
+  turno = 1
+  neutron =  {moved: true, row: 2, col: 2}
+  pieceSelected: any = {selected: false}
+  endGame = false; 
   initBoard():void{
     let num=1;
     let color;
@@ -31,6 +35,7 @@ export class TableroComponent implements OnInit {
     }
   };
 
+
   checkDirection(row,col,rowDir,colDir): any{
     let newRow = row + rowDir
     let newcol = col + colDir
@@ -40,7 +45,6 @@ export class TableroComponent implements OnInit {
       {
       
       while(!(newRow > 4 || newRow<0 || newcol > 4 || newcol<0)){
-        console.log("rowcolwhile",newRow,newcol)
         if(this.board[newRow][newcol].piece == 0){
           possibleMov.row = newRow;
           possibleMov.col = newcol;
@@ -92,8 +96,25 @@ export class TableroComponent implements OnInit {
     });
     return possible;
   }
+  checkGameEnd(row,col){
+    if (row == 0) return 1;
+    if (row == 4) return 2;
+    let possibleMoves= this.possibleMoves(row,col)
+    if (possibleMoves.length == 0){
+      if (this.turno %2 == 0)return 1;
+      else return 2;
+    }
+    return 0;
 
+  }
   setSelected(row,col,piece):void{
+    if(!this.endGame){
+    let pieceToMove:number;
+    if(this.neutron.moved){
+      if (this.turno % 2 == 0) pieceToMove = 2;
+      else pieceToMove = 1
+    }else pieceToMove = 3;
+
     if (this.pieceSelected.selected){
 
       if(this.isPossible(row,col,this.pieceSelected)){
@@ -105,12 +126,37 @@ export class TableroComponent implements OnInit {
         })
         this.board[this.pieceSelected.row][this.pieceSelected.col].selected=false;
         this.pieceSelected={selected: false}
+        
+        
+        if(this.board[row][col].piece == 3){
+          this.neutron.moved = true;
+          this.neutron.col = col
+          this.neutron.row =  row
+        }
+        else {
+          this.neutron.moved = false
+          this.turno += 1
+        }
+        let winner = this.checkGameEnd(this.neutron.row,this.neutron.col)
+        if (winner != 0)
+        {
+          let winnerColor
+          if (winner == 1) winnerColor = "Azules"
+          else winnerColor = "Rojas"
+          this.endGame = true
+          this.toastr.success('Ha ganado el jugador con las piezas '+ winnerColor)
+
+        }
+        
+        
+      }else{
+        this.toastr.info("Ese movimiento no es posible","")
       }
     }else{
 
-      if (piece != 0)
+      if (piece == pieceToMove)
       {
-        console.log('rowcol',row,col)
+   
         let possibleMoves= this.possibleMoves(row,col)
         possibleMoves.forEach(move=>{
           this.board[move.row][move.col].selected=true;
@@ -118,12 +164,18 @@ export class TableroComponent implements OnInit {
         this.pieceSelected={selected: true,col: col, row:row, piece:piece, possibleMoves: possibleMoves}
         
         this.board[row][col].selected = true
+      }else{
+        if (pieceToMove ==  3)this.toastr.info("Debe mover el neutron","", {timeOut: 1000})
+        if (pieceToMove ==  1)this.toastr.info("Debe mover el jugador con las piezas azules","", {timeOut: 1000})
+        if (pieceToMove ==  2)this.toastr.info("Debe mover el jugador con las piezas rojas","", {timeOut: 1000})
       }
       
     }
   }
+  }
 
   ngOnInit() {
+    this.toastr.success('El juego ha comenzado', 'A divertirse!!!')
     this.initBoard()
   }
 
