@@ -120,10 +120,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@^7.3.2":
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.2.tgz#33f525051d71e2525d29b2aa798c817334973a7b"
-  integrity sha512-jnthvY1Kt+DpJTrkgyKTiVuYgBdp4iG7QDeZJPBQm0e8mL2K0Pi9AqFbo01E4CGPqZpvtEggvqM0OJpR8J+amw==
+"@angular/cdk@^7.3.3":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.3.tgz#02a2ad248141cd9968a5950ce0602da3fcf5445b"
+  integrity sha512-0M3nwq+c9+d+p0XeU12I9djutlsajRrxcu7AvHQXUs/5grYFsXsX0f468qXDiKmcgqGUBNtN2fBOUhGNlispuQ==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -197,10 +197,10 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-6.1.10.tgz#9f87b740befca8bf9a5fb499446425519389f52f"
   integrity sha512-nN29Ovomg21eL8acwOSUFAYwWFI1TuFwUgUu37ZssfVQrYdaV+BFx3yv3P0nKU90h3Hp+oIkWHd8U34UYrvBCg==
 
-"@angular/material@^7.3.2":
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.2.tgz#9d1647689cf4a0892f099e021f97f5e8ab1332fa"
-  integrity sha512-x3it941KE8zuzDH1VLP4yfgmC3hwrqa1a2GHiekztF2KrbWPzEEGNvlyYOUV7nwiuwFw5twON73rW0HUKndwEA==
+"@angular/material@^7.3.3":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.3.tgz#f3f87fa90c685cfad0b6974489c69d2676199052"
+  integrity sha512-DZdJaVpXsd5QlfpN5P871llw8AKh5QvRiyro3QRmEajYN85Xiawqpbt7O60TrwcFM6DzYLI3UeyWq8LFdmi/+Q==
   dependencies:
     tslib "^1.7.1"
 
@@ -254,6 +254,13 @@
     rxjs "^6.0.0"
     semver "^5.3.0"
     semver-intersect "^1.1.2"
+
+"@toverux/ngx-sweetalert2@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@toverux/ngx-sweetalert2/-/ngx-sweetalert2-4.0.0.tgz#a5849a1435a2a4a720527f62e878d605c8ad6072"
+  integrity sha512-NhP5iPaLnWIISw3i4tJEHXqv8hY3THwq8/ZJzSYq0qCYb1b4umH9mW1/Z0nD8tX8zmh39Mfp/PbFn1FaCTey9A==
+  dependencies:
+    tslib "^1.9.0"
 
 "@types/caseless@*":
   version "0.12.1"
@@ -6477,6 +6484,11 @@ supports-color@^5.1.0, supports-color@^5.3.0, supports-color@^5.4.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+sweetalert2@7.15.1:
+  version "7.15.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.15.1.tgz#edd9bd4d5501b22e18755686a343c7afe3e9adb2"
+  integrity sha512-0D0W7l63ki1lJoG67RaE7eos6xNVs+v7qu9o1D21hV8ghvaJZ78oBJ0Plk3Ev4xZ8thWqNHjHGjBk2Y+eZQCmw==
 
 symbol-observable@^1.2.0:
   version "1.2.0"

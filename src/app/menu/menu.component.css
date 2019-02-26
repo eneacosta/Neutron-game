@@ -1,0 +1,19 @@
+.padding{
+    margin-top: 40px;
+
+}
+.example-header-image {
+    background-image: url('https://cdn0.iconfinder.com/data/icons/education-239/64/science-atom-education-nuclear-physics-electron-512.png');
+    background-size: cover;
+  }
+
+  .background-color{
+      background-color: lightblue ;
+  }
+  .background-color-ex{
+    background-color: #cce0ff ;
+}
+
+.padding-bottom{
+    margin-bottom: 50px;
+}

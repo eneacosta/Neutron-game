@@ -13,16 +13,17 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.2.6",
-    "@angular/cdk": "^7.3.2",
+    "@angular/cdk": "^7.3.3",
     "@angular/common": "^6.0.0-rc.1",
     "@angular/compiler": "^6.0.0-rc.1",
     "@angular/core": "^6.0.0-rc.1",
     "@angular/forms": "^6.0.0-rc.1",
     "@angular/http": "^6.0.0-rc.1",
-    "@angular/material": "^7.3.2",
+    "@angular/material": "^7.3.3",
     "@angular/platform-browser": "^6.0.0-rc.1",
     "@angular/platform-browser-dynamic": "^6.0.0-rc.1",
     "@angular/router": "^6.0.0-rc.1",
+    "@toverux/ngx-sweetalert2": "^4.0.0",
     "angular2-draggable": "^2.2.1",
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
@@ -32,6 +33,7 @@
     "pusher": "^2.2.0",
     "rxjs": "6.0.0",
     "rxjs-compat": "^6.4.0",
+    "sweetalert2": "7.15.1",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {

@@ -1,14 +1,50 @@
-<mat-grid-list *ngFor="let row of board" class="board shadow" cols="5" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let col of row"
-  [colspan]='col.cols'
-  [rowspan]='col.rows'
-  [ngClass]='{"piece-selected":col.selected}'
-  class="position "
-  (click) = "setSelected(col.row,col.col,col.piece)">
-  <div class="full-size" [style.background]='col.color'></div>
-  <div [ngClass]='{"piece-blue":col.piece==1,"piece-red":col.piece==2,"piece-green":col.piece==3,"piece":col.piece}'>
-  </div>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="p-grid">
+  <div class="example-card background-color p-col p-sm-10 p-sm-offset-1 p-md-6 p-md-offset-3 p-xl-4 p-xl-offset-4 ">
+    <mat-grid-list *ngFor="let row of board" class="board shadow " cols="5" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let col of row"
+      [colspan]='col.cols'
+      [rowspan]='col.rows'
+      [ngClass]='{"piece-selected":col.selected}'
+      class="position "
+      (click) = "setSelected(col.row,col.col,col.piece)">
+      <div class="full-size" [style.background]='col.color'></div>
+      <div [ngClass]='{"piece-blue":col.piece==1,"piece-red":col.piece==2,"piece-green":col.piece==3,"piece":col.piece}'>
+      </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div class="margin-top p-grid p-justify-between">
 
-  
+
+        <button [swal]="newGameSwal" mat-raised-button color="primary" class="p-col-4">Nuevo juego</button>
+        <button [swal]="menuSwal" mat-raised-button color="warn" class="p-col-4">Volver al menu</button>
+        
+        </div>
+  </div>
+</div>
+
+<swal
+#newGameSwal
+title="Está seguro de que desea comenzar un nuevo juego?"
+text="Su progreso actual será perdido"
+type="warning"
+confirmButtonText='Si'
+confirmButtonColor='#3085d6'
+cancelButtonColor='#d33'
+cancelButtonText="Cancelar"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="initBoard()">
+</swal>
+<swal
+#menuSwal
+title="Está seguro de que desea volver al menu principal?"
+text="Su progreso actual será perdido"
+type="warning"
+confirmButtonText='Si'
+confirmButtonColor='#3085d6'
+cancelButtonColor='#d33'
+cancelButtonText="Cancelar"
+[showCancelButton]="true"
+[focusCancel]="true"
+(confirm)="goMenu()">
+</swal>

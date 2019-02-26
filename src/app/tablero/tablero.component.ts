@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-tablero',
@@ -8,7 +9,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TableroComponent implements OnInit {
 
-  constructor(private toastr: ToastrService) { }
+  constructor(
+    private toastr: ToastrService,
+    private router: Router
+    ) { }
   board: any[]=[]
   turno = 1
   neutron =  {moved: true, row: 2, col: 2}
@@ -173,7 +177,9 @@ export class TableroComponent implements OnInit {
     }
   }
   }
-
+  goMenu(){
+    this.router.navigateByUrl('/menu')
+  }
   ngOnInit() {
     this.toastr.success('El juego ha comenzado', 'A divertirse!!!')
     this.initBoard()

@@ -11,7 +11,5 @@ export class AppComponent {
   constructor(private toastr: ToastrService) {}
   ngOnInit() {
   }
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
-  }
+
 }

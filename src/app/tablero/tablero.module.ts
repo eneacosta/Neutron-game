@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatGridListModule } from '@angular/material'
-import { AngularDraggableModule } from 'angular2-draggable';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MatGridListModule,MatButtonModule } from '@angular/material'
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 
 
@@ -10,13 +9,12 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
   imports: [
     CommonModule,
     MatGridListModule,
-    AngularDraggableModule,
-    DragDropModule
+    MatButtonModule,
+    SweetAlert2Module
   ],
   exports: [
     MatGridListModule,
-    AngularDraggableModule,
-    DragDropModule
+    MatButtonModule
   ],
   declarations: [
 

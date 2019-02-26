@@ -1,0 +1,53 @@
+<div class="p-grid">
+<mat-card class="example-card background-color p-col p-sm-10 p-sm-offset-1 p-md-6 p-md-offset-3 p-xl-4 p-xl-offset-4 " >
+    <mat-card-header class="padding-bottom">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Neutron game</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div align="center" class="padding">
+        <a  routerLink="/play" mat-raised-button color="primary" >Nuevo juego</a>
+        
+        </div>
+        <div align="center" class="padding">
+        <a href="https://es.wikipedia.org/wiki/Neutr%C3%B3n_(juego)" target="_blank" mat-raised-button color="primary">Sobre Neutron Game</a>
+      </div>
+      <div align="center" class="padding">
+          <mat-expansion-panel  class="background-color-ex">
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+            Movimientos
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Azul mueve primero, y siguen jugando alternadamente. En su turno el jugador debe mover 
+              siempre dos fichas (a excepcion del primer movimiento, que no se mueve el neutron), en este orden estricto:
+            </p>
+                <ul align="left">
+                  <li>Primero el Neutrón</li>
+                <li>Luego una ficha de su color.</li>
+              </ul><p>
+                Tanto el Neutrón como las demás fichas, llamadas Electrones, pueden ser movidas,
+                 en cualquier dirección (horizontal, vertical o diagonal), y es obligatorio desplazarlas lo más posible en la dirección elegida, pero sin ir a ocupar ni saltar por encima de una casilla ya ocupada. Es decir, que después de elegida una dirección de desplazamiento, la ficha debe ser movida todo lo posible en tal dirección, hasta quedar su paso bloqueado por otra ficha cualquiera o por el borde del tablero.</p>
+          </mat-expansion-panel>
+      </div>
+      <div align="center" class="padding">
+          <mat-expansion-panel class="background-color-ex">
+            <mat-expansion-panel-header>
+            <mat-panel-title>
+            Final
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Gana el primero que consigue llevar el Neutrón a cualquier casilla libre de su línea de partida.
+                Un jugador pierde si se ve forzado a llevar el Neutrón hacia una casilla de la línea de partida adversaria. También pierde si la situación está bloqueada y en su turno no puede mover el Neutrón o, si después de mover el Neutrón, no puede mover ninguna de sus fichas.</p>
+          </mat-expansion-panel>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+</div>
