@@ -4,7 +4,7 @@
 box-shadow: 9px 9px 42px -6px rgba(0,0,0,0.72);
 }
 .board{
-    background-image: url("https://thumb.bibliocad.com/images/content/00030000/3000/33967.jpg");
+    background-image: url("/assets/images/madera.jpg");
     -webkit-box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 63px -23px rgba(0,0,0,0.75);
@@ -49,7 +49,7 @@ box-shadow: inset -70px -70px 23px -65px rgba(0,0,0,0.54);
 .piece-green{
     background-color: #a2c999;
 
-    background-image: url("https://cdn0.iconfinder.com/data/icons/education-239/64/science-atom-education-nuclear-physics-electron-512.png");
+    background-image: url("/assets/images/neutron.png");
     background-repeat: no-repeat;
 
     background-size: 100% 100%;

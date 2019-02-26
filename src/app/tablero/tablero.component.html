@@ -13,12 +13,9 @@
       </mat-grid-tile>
     </mat-grid-list>
     <div class="margin-top p-grid p-justify-between">
-
-
-        <button [swal]="newGameSwal" mat-raised-button color="primary" class="p-col-4">Nuevo juego</button>
-        <button [swal]="menuSwal" mat-raised-button color="warn" class="p-col-4">Volver al menu</button>
-        
-        </div>
+      <button [swal]="newGameSwal" mat-raised-button color="primary" class="p-col-4">Nuevo juego</button>
+      <button [swal]="menuSwal" mat-raised-button color="warn" class="p-col-4">Volver al menu</button>
+    </div>
   </div>
 </div>
 
@@ -33,7 +30,7 @@ cancelButtonColor='#d33'
 cancelButtonText="Cancelar"
 [showCancelButton]="true"
 [focusCancel]="true"
-(confirm)="initBoard()">
+(confirm)="resetGame()">
 </swal>
 <swal
 #menuSwal

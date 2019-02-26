@@ -14,11 +14,17 @@ export class TableroComponent implements OnInit {
     private router: Router
     ) { }
   board: any[]=[]
+
+  Infinite = 1000000
+  Neutri:boolean = false;
+
+
   turno = 1
   neutron =  {moved: true, row: 2, col: 2}
   pieceSelected: any = {selected: false}
   endGame = false; 
   initBoard():void{
+    
     let num=1;
     let color;
     
@@ -180,6 +186,15 @@ export class TableroComponent implements OnInit {
   goMenu(){
     this.router.navigateByUrl('/menu')
   }
+
+  resetGame(){
+    this.turno = 1
+    this.neutron =  {moved: true, row: 2, col: 2}
+    this.pieceSelected = {selected: false}
+    this.endGame = false; 
+    this.initBoard()
+  }
+
   ngOnInit() {
     this.toastr.success('El juego ha comenzado', 'A divertirse!!!')
     this.initBoard()
